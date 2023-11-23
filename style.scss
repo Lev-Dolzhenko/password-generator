@@ -1,0 +1,167 @@
+/*-----VARS-----*/
+
+$accentColor: rgb(201, 131, 1);
+$blackText: #000;
+
+/*-----/VARS-----*/
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: rgb(48, 48, 141);
+}
+
+.container {
+    width: 840px;
+    padding: 20px;
+    margin: 0 auto;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.container-password {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.password-title {
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    color: $accentColor;
+}
+
+.password-block {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input-password {
+        border: 1px solid $accentColor;
+        border-radius: 5px;
+        width: 80%;
+        height: 30px;
+
+        padding-left: 10px;
+        color: $accentColor;
+
+        display: flex;
+        // text-align: center;
+        align-items: center;
+
+    };
+
+    .input-length {
+        border: 1px solid $accentColor;
+        border-radius: 5px;
+        width: 10%;
+        height: 30px;
+
+        color: $accentColor;
+    }
+}
+
+.input-password {
+    border: 1px solid $accentColor;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+
+    padding-left: 10px;
+    color: $accentColor;
+
+    display: flex;
+    // text-align: center;
+    align-items: center;
+
+};
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: $accentColor;
+    font-weight: 700;
+}
+
+.option {
+    border: 1px solid $accentColor;
+    border-radius: 10px;
+    padding: 10px;
+
+    transition: background-color 0.2s linear;
+    
+    &:hover {
+        background-color: $accentColor;
+        color: $blackText;
+    }
+}
+
+// input[type="checkbox"] {
+//     -webkit-appearance: none;
+//     appearance: none;
+//   }
+
+input[type="number"] {
+
+	-moz-appearance: textfield;
+
+	-webkit-appearance: textfield;
+
+	appearance: textfield;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+
+	display: none;
+
+}
+
+.button-generate {
+    background-color: $accentColor;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    margin: 0 auto;
+}
+
+.input-checked {
+    background-color: $accentColor;
+    color: #000;
+}
+
+.passwords-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    overflow-y: scroll;
+    max-height: 250px;
+}
+
+.password-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.input-password--sup {
+    width: 92.5%;
+}
+
