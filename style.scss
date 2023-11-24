@@ -1,3 +1,18 @@
+@keyframes copy {
+   0% {
+        top: -100px;
+    }
+
+   50% {
+    top: 0px;
+    }
+
+    100% {
+        top: -100px;
+    }
+}
+
+
 /*-----VARS-----*/
 
 $accentColor: rgb(201, 131, 1);
@@ -12,6 +27,8 @@ body {
     font-weight: 400;
     background-color: rgb(48, 48, 141);
 }
+
+
 
 .container {
     width: 840px;
@@ -39,6 +56,7 @@ body {
 }
 
 .password-block {
+    position: relative;
 
     display: flex;
     align-items: center;
@@ -67,7 +85,24 @@ body {
 
         color: $accentColor;
     }
+
+    &::before {
+        content: "Length of pass";
+        position: absolute;
+        right: 60px;
+        top: -10px;
+        color: $accentColor;
+    }
+
+    &::after {
+        content: "Your password";
+        position: absolute;
+        left: 0px;
+        top: -10px;
+        color: $accentColor;
+    }
 }
+
 
 .input-password {
     border: 1px solid $accentColor;
@@ -85,12 +120,23 @@ body {
 };
 
 .options {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     color: $accentColor;
     font-weight: 700;
+
+    &::after {
+        content: "Chose options";
+        position: absolute;
+        left: 0px;
+        top: -16px;
+        color: $accentColor;
+        font-weight: 400;
+    }
 }
 
 .option {
@@ -106,10 +152,10 @@ body {
     }
 }
 
-// input[type="checkbox"] {
-//     -webkit-appearance: none;
-//     appearance: none;
-//   }
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
 
 input[type="number"] {
 
@@ -165,3 +211,43 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 92.5%;
 }
 
+.copy-block {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+    height: 80px;
+
+    overflow: hidden;
+}
+
+.copy-info {
+    position: absolute;
+    left: 0%;
+    top: -100%;
+
+    width: 200px;
+    height: 60px;
+
+    border: 1px solid $accentColor;
+    border-radius: 5px;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: $accentColor;
+        font-weight: 700;
+    }
+}
+
+.show-popup {
+    animation: copy 1.5s;
+}
+
+.hide-popup {
+    animation: copy 0.5s reverse ;
+}
